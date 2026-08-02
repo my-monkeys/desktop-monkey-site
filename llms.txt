@@ -1,0 +1,40 @@
+# Desktop Monkey
+
+> A free, open-source pixel-art desktop pet for Windows and macOS. He follows your
+> mouse cursor around the screen, and when the mouse sits still he gets on with his
+> own life — wandering, climbing the screen edge, napping, eating, and leaving poop
+> on your wallpaper. One 6 MB file, no installer, no account, no dependencies.
+
+## Facts
+
+- **Platforms**: Windows 10/11 (single .exe, no installer) and macOS (Homebrew cask, signed and notarized by Apple)
+- **Price**: free, and free forever. No account, no telemetry, no in-app purchase
+- **License**: MIT for the code. Sprites belong to their authors (tiki-ted, Reactorcore) and are not covered by it
+- **Written in**: Go — no game engine. Windows uses user32 syscalls without cgo; macOS uses Cocoa/CoreGraphics
+- **Size on disk**: about 6 MB
+- **Updates**: the app updates itself from GitHub releases
+- **Languages**: English by default, French auto-detected from the system language, and forceable in settings
+- **Made by**: My-Monkey (https://my-monkey.fr), a French non-profit collective based in Montpellier
+
+## What he actually does
+
+- Follows the mouse cursor everywhere, and hunts it down to whack it with a banana — a hit knocks the real cursor across the screen
+- Takes clicks: three hearts, a damage flash, then he keels over onto the taskbar. Shake his body to revive him
+- Climbs the screen edge, admires the view, then drops — the landing costs him a heart
+- Eats, digests, then poops on the wallpaper. Click a poop to pop it. He also cleans up old ones, sometimes by throwing them at your cursor
+- Naps for real, with floating Z's, and any mouse movement startles him awake
+- Runs on four mood gauges — energy, boredom, happiness, fear — that drift with how you treat him and weight everything he does
+- Can be tickled by shaking the mouse right next to him
+
+## Common questions
+
+- **He died. How do I revive him?** Grab the body and shake it. He comes back a bit jittery.
+- **He's too big.** Tray menu → Open settings → Size, anywhere from 0.5× to 3×.
+- **Does he speak French?** Yes. He follows the system language, and it can be forced in settings.
+- **How do I uninstall him?** `brew uninstall --cask desktop-monkey` on macOS, or delete `monkey.exe` on Windows.
+
+## Links
+
+- [Website](https://desktop-monkey.my-monkey.fr/)
+- [Source code](https://github.com/my-monkeys/desktop-monkey)
+- [Latest release](https://github.com/my-monkeys/desktop-monkey/releases/latest)

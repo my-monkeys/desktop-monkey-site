@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://desktop-monkey.my-monkey.fr/sitemap.xml
