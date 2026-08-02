@@ -19,7 +19,9 @@
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
 
-  # CSS/JS changent a chaque deploiement, sous le meme nom.
+  # CSS/JS changent a chaque deploiement sous le meme nom, et rien ne purge le
+  # cache Cloudflare : c'est le ?v=N dans le HTML qui sert de cache-buster.
+  # Penser a l'incrementer en meme temps qu'on touche a ces fichiers.
   <FilesMatch "\.(css|js)$">
     Header set Cache-Control "public, max-age=86400"
   </FilesMatch>
