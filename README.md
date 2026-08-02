@@ -36,3 +36,18 @@ rend la main avant la fin du pipeline).
 
 Les versions du site sont **indépendantes** de celles de l'app : sortir une release
 ici ne touche ni les binaires ni l'auto-update de Desktop Monkey.
+
+## Crédits
+
+- Sprites du singe : [Pixel Art Monkey](https://tiki-ted.itch.io/pixel-art-monkey) par tiki-ted
+- Explosion de cœur : [Reactorcore](https://reactorcore.itch.io/explosion-spriteanim-sheet-minipack)
+- Police : [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) par CodeMan38, sous [SIL OFL 1.1](fonts/OFL.txt)
+
+## Licence
+
+Le code et les textes du site sont sous [licence MIT](LICENSE).
+
+**Les médias ne le sont pas.** Les sprites appartiennent à leurs auteurs (voir Crédits),
+et les captures d'écran (`.gif`, `.webm`, `.mp4`, `assets/og.png`) montrent en plus des
+fonds d'écran Microsoft et Apple — elles sont là pour documenter l'application, pas pour
+être réutilisées. Même distinction que dans le repo de l'app.
