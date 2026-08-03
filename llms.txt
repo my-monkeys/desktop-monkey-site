@@ -38,3 +38,10 @@
 - [Website](https://desktop-monkey.my-monkey.fr/)
 - [Source code](https://github.com/my-monkeys/desktop-monkey)
 - [Latest release](https://github.com/my-monkeys/desktop-monkey/releases/latest)
+
+## Also from My-Monkey
+
+Other free, open-source apps by the same collective:
+
+- [OpenSuperWhisper](https://opensuperwhisper.com) — voice dictation for macOS. Hold a shortcut, speak, release, and the text lands in whatever app you are in. Four transcription engines, three of them fully on-device. MIT, source at https://github.com/my-monkeys/OpenSuperWhisper
+- [Claude Monitor](https://github.com/my-monkeys/claude-monitor) — a macOS menu bar app that counts running Claude Code instances and MCP servers, watches the per-user process limit and RAM, and auto-kills runaway process swarms. MIT.

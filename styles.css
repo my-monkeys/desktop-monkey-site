@@ -301,10 +301,22 @@ input[type=range] { width: 100%; accent-color: var(--a); }
 .banniere-maj a { margin-left: auto; font-size: 13.5px; }
 
 /* ————————————————————————— faq ————————————————————————— */
-.faq { padding-bottom: 70px; }
 .grille-faq { display: grid; gap: 20px 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grille-faq p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--mut); }
 .grille-faq code { font-family: var(--mono); font-size: 12.5px; color: var(--ink); }
+
+/* ————————————————————————— les autres projets ————————————————————————— */
+#autres { padding-bottom: 70px; }
+.grille-projets { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.projet { display: flex; flex-direction: column; padding: 24px; color: var(--ink);
+          transition: border-color .15s, transform .15s; }
+.projet:hover { border-color: var(--a); color: var(--ink); text-decoration: none; transform: translateY(-2px); }
+.projet .titre-carte { margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.projet-fleche { font-family: var(--sans); font-size: 13px; color: var(--a); transition: transform .15s; }
+.projet:hover .projet-fleche { transform: translateX(3px); }
+.projet-texte { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--mut); }
+/* la meta reste collee en bas pour que les deux cartes s'alignent malgre des textes inegaux */
+.projet .note { margin-top: auto; padding-top: 14px; font-family: var(--mono); font-size: 11.5px; letter-spacing: .3px; }
 
 /* ————————————————————————— pied de page ————————————————————————— */
 .pied { border-top: 1px solid var(--brd2); background: #14171f; }
