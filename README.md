@@ -22,20 +22,17 @@ sont mis en cache. Si tu les modifies, **incrémente le `?v=N`** dans `index.htm
 
 ## Déployer
 
-Le déploiement se déclenche sur une **release GitHub** (webhook org → monkey) :
+`git push` sur `main` suffit : Coolify (prod-cookie, application
+`ces0ch8jj9lvqotlifvp1blf`, build pack `static`) récupère le dépôt et sert la racine
+telle quelle, sans build. Compter une à deux minutes.
+
+Vérifier le dernier déploiement (`finished` + le commit poussé) :
 
 ```bash
-cd ..
-tar czf /tmp/app.tgz --exclude='.git' desktop-monkey-site/
-gh release create v1.0.1 --repo my-monkeys/desktop-monkey-site /tmp/app.tgz \
-  --title "Site v1.0.1" --notes "…"
+ssh prod-cookie "docker exec coolify-db psql -U coolify -d coolify -At -F'|' -c \"select status, left(commit,7) from application_deployment_queues where application_id = (select id from applications where uuid='ces0ch8jj9lvqotlifvp1blf')::text order by created_at desc limit 1;\""
 ```
 
-Puis confirmer `status: success` sur `http://monkey.cookie/` (le `gh release create`
-rend la main avant la fin du pipeline).
-
-Les versions du site sont **indépendantes** de celles de l'app : sortir une release
-ici ne touche ni les binaires ni l'auto-update de Desktop Monkey.
+Plus de release GitHub ni de `.tgz` : l'ancien flux via monkey (dev-cookie) est mort.
 
 ## Crédits
 
